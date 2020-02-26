@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # tells my app what do do/ how to respond to HTTP requests
-  resources :bagels, only: [:index, :new, :create, :show]
+  resources :bagels, only: [:index, :new, :create, :show, :edit, :update]
 
   # when I receive a GET request to /bagels
   # go TO the bagels controller, for a method called index

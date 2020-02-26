@@ -1,6 +1,6 @@
 class Bagel < ApplicationRecord
-  belongs_to :store
-  
+  belongs_to :user
+
   validates :name, { presence: true, uniqueness: true }
   # validates :price, numericality: { presence: true, only_integer: true, less_than: 30 }
 

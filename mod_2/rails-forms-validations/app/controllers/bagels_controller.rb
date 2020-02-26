@@ -4,15 +4,21 @@ class BagelsController < ApplicationController
   end
 
   def new
-    @user = current_user
+    @user = User.create
     @bagel = Bagel.new
   end
 
   def create
-    # binding.pry
+    binding.pry
+
+    #create new bagel
     @bagel = Bagel.new(bagel_params)
 
-    @bagel.user = User.find(bagel_params[:user_id])
+    #find User from hidden field params
+    @user = User.find(bagel_params[:user_id])
+
+    #associate the user to the bagel
+    @bagel.user = @user
 
     if @bagel.valid?
       @bagel.save
@@ -33,11 +39,12 @@ class BagelsController < ApplicationController
   end
 
   def edit
-
+    @user = User.create
     @bagel = Bagel.find(params[:id])
   end
 
   def update
+
     @bagel = Bagel.find(params[:id])
 
     @bagel.update(update_params)

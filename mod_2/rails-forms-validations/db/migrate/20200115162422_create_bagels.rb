@@ -4,7 +4,7 @@ class CreateBagels < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :flavor
       t.integer :price
-
+      t.integer :user_id
       t.timestamps
     end
   end
