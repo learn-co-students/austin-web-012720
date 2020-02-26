@@ -13,6 +13,7 @@ class DoctorsController < ApplicationController
   end
 
   def create
+    binding.pry
     @doctor = Doctor.new(doctor_params)
     if @doctor.valid?
       @doctor.save
@@ -37,6 +38,7 @@ class DoctorsController < ApplicationController
   private
 
   def doctor_params
+
     params.require(:doctor).permit(:name, :specialty)
   end
 

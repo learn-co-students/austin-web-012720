@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   # tells my app what do do/ how to respond to HTTP requests
-  resources :bagels, only: [:index, :new, :create]
+  resources :bagels, only: [:index, :new, :create, :show]
 
   # when I receive a GET request to /bagels
   # go TO the bagels controller, for a method called index
   # construct a helper method called bagels_path
 
-# helper method is bagels_path
+# url_helper method is bagels_path
   # get '/bagels', to: 'bagels#index', as: 'bagels'
   # get '/bagels/new', to: 'bagels#new', as: 'new_bagel'
   # post '/bagels', to: 'bagels#create', as: 'bagels'

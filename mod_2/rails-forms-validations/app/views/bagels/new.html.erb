@@ -1,6 +1,6 @@
 <% if @bagel.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@bagel.errors.count, "error") %> prohibited this article from being saved:</h2>
+    <h2><%= pluralize(@bagel.errors.count, "error") %> prohibited this bagel from being saved:</h2>
 
     <ul>
     <% @bagel.errors.full_messages.each do |msg| %>
@@ -11,4 +11,4 @@
 <% end %>
 
 
-<% if @errors %>
+<%= render "form" %> 

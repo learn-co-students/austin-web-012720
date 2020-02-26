@@ -1,0 +1,10 @@
+<%= form_for(@bagel) do |f| %>
+  <%= f.hidden_field :user_id, :value => @user.id
+  <%= f.label :name %> <br>
+  <%= f.text_field :name%> <br>
+  <%= f.label :flavor %> <br>
+  <%= f.text_field :flavor %><br>
+  <%= f.label :price %> <br>
+  <%= f.text_field :price %><br>
+  <%= f.submit "Submit"%>
+<% end %>
