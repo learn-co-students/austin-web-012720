@@ -34,3 +34,25 @@ class User
   end
 
 end
+
+arr.select do |el|
+  el.name == "test"
+end.collect do |element|
+  element.name
+end
+
+
+class_room = ClassRoom.new
+class_room.students = ["ben", "jack", "rochelle"]
+
+class_room.students = [<Student @name='ben'>, <Student @name='matt'>, ...]
+
+Student.new(name, class_room)
+
+Student.new('Alex')
+Student.new(String.new('Alex'))
+
+# Aquarium has many Exhibits / Exhibit belongs to Aquarium
+# Exhibit has many Fish / Fish belongs to Exhibit
+Exhibit.new("coral reefs", aguarium)
+Fish.new('nemo', exhibit)

@@ -10,7 +10,14 @@ class Like
   def initialize(user, tweet)
     @user = user
     @tweet = tweet
-    @@all << self 
+    @@all << self
   end
 
 end
+
+class Like < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :tweet
+
+  like = Like.create(user_1, tweet_1)
+end 

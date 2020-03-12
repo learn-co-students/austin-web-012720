@@ -16,4 +16,9 @@ class Tweet
   def username
     user.username
   end
+
+  def liked_tweets
+    #return an array of all the tweets a user has liked 
+  end
+
 end
